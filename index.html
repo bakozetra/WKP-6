@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>WKP6</title>
-	</head>
-	<body>
-		<script src="script.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>WKP6</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>
+                    Hungry Student Restaurant
+                </h1>
+            </header>
+            <article>
+                <div class="container">
+                    <header>
+                        <h2 class="food-list">
+                            Food List
+                        </h2>
+                    </header>
+                    <ul class="">
+                        <li>filter by:</li>
+                        <li class="tasty">
+                            <input
+                                type="checkbox"
+                                id="spicy"
+                                name="spicy"
+                                onchange='handleChange(this);'
+                            >
+                            <label for="spicy">Spicy</label>
+                            <input type="checkbox" id="vegeterian" name="vegeterian" onchange='handleChange(this);'>
+                            <label for="vegeterian">Vegeterian</label>
+                        </li>
+                    </ul>
+                    <ol>
+                        <li class="all-list">
+                        </li>
+                    </ol>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2 class="food-list">
+                            Order List
+                        </h2>
+                    </header>
+                     <ol>
+                         <li class="total-price">
+                         </li>
+                    </ol>
+                </div>
+            </article>
+            <button class="cofirm-order">Confirm order</button>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
