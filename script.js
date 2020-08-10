@@ -39,14 +39,15 @@ const foods = [
 const container = document.querySelector('.container');
 const aboutFood = foods.map(food => {
 	return `
-		<ul data-id = ${food.id}>
-		<li>${food.title}</li>
-		<li>${food.price}Ar</li>
-		<li><button class="addButton">add</button></li>
+		<ul data-id = ${food.id} data-title = ${food.title} data-price = ${food.price} >
+			<li>${food.title}</li>
+			<li>${food.price}Ar</li>
+			<li><button class="addButton">add</button></li>
 		</ul>
 		`
 })
 console.log(aboutFood);
+// grab the list item
 const allList  = document.querySelector('.all-list');
 // add an inner html to get the detail of the food
 const listOfFood = () => {
@@ -69,7 +70,8 @@ const handleChange = () => {
 			    <li>${food.price}Ar</li>
 			    <li><button class="addButton">add</button></li>
 		    </ul>
-		`).join('');
+		`)
+		.join('');
 		allList.innerHTML = mapSpicy;
 	} else if (checkboxVegeterian.checked === true) {
 		const filterVegetarian = foods.filter(food => food.vegetarian === true)
@@ -80,12 +82,12 @@ const handleChange = () => {
 			    <li>${food.price}Ar</li>
 			    <li><button class="addButton">add</button></li>
 		    </ul>
-		`).join('');
+		`)
+		.join('');
 		allList.innerHTML = mapVegetarian;
-}
-    else {
+    }else {
    listOfFood();
-}
+	}
 }
  // listen to event listener
 check.addEventListener('change',handleChange);
@@ -94,6 +96,15 @@ const totalPrice = document.querySelector('.total-price');
 const tottalOfprice = (e) => {
 	if(e.target.matches('.addButton')){
 	 const button = e.target.closest('ul'); 
+	 const{price,title,id} = button.dataset;
+	 const html = `
+	        <ul>
+				<li>${title}</li>
+				<li></li>
+			    <li>${price}Ar</li>
+		    </ul>
+		`
+	totalPrice.innerHTML += html;
 	}
 } 
 window.addEventListener('click',tottalOfprice);

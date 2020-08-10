@@ -1,92 +1,19 @@
-# WKP6 - Hungry Student Restaurant
+## Hungry Student Restaurant
+ 
+ ### In a few sentences, explain the structure of your project .
+ - I create an html and I add few code oon it , I put the input checkbox in the html.
+ - I use map() to get the the list of the food with price and button, I put them inside of the one function.
+ - I put the checkbox in one function and I use filter to get the **boolean** and then I use map() so that I access the array When I click the checkbox.
 
-### Another website about food, really...
+ ### If you had more time, what area of your work would you improve?
+ - If I had more time, I would work on the oder list. 
+ ### Did you learn anything new while working on this project?
+ - Yes, I have learn , how to use map().
+ - I have never known that we can use filter() and map() at the same time
+### What was the most challenging part for you?
+ - To get the total of the price and to count are the most chanlenging.
 
-Yes, but who doesn't like food? 😄
-
-This time, we're going to build a food delivery app, where we can see the meal options, select them, and see the result in our cart.
-
-### Users must be able to :
-
--   See a list of five meal options
--   See the prices of each meal option
--   Add a meal to the cart
--   Filter the list to see only the vegetarian meals, or only the spicy ones
--   See their total bill
--   “Check out” - this doesn’t have to process payment, just simply display
-    a message stating the order as been confirmed.
-
-### Bonus :
-
--   Change the quantity of meals in the cart
--   Remove a meal from the cart
-
-Here is an example of layout :
-
-![assets/1.png](assets/1.png)
-
-And when I click on the _Confirm Order_ button, I can display a message to show the total bill from the order.
-
-![assets/2.png](assets/2.png)
-
-### Food list
-
-Here's the food object :
-
-```jsx
-const foods = [
-	{
-		id: 'ravitoto',
-		price: 5000,
-		title: 'Ravitoto',
-		spicy: true,
-		vegetarian: false,
-	},
-	{
-		id: 'pasta',
-		price: 4000,
-		title: 'Pasta',
-		spicy: true,
-		vegetarian: true,
-	},
-	{
-		id: 'burger',
-		price: 5000,
-		title: 'Burger',
-		spicy: false,
-		vegetarian: false,
-	},
-	{
-		id: 'rice',
-		price: 2000,
-		title: 'Rice and Leaves',
-		spicy: false,
-		vegetarian: true,
-	},
-	{
-		id: 'mofogasy',
-		price: 500,
-		title: 'Mofogasy',
-		spicy: false,
-		vegetarian: false,
-	},
-];
-```
-
-The **id** here is a unique string, is role is to identify an element inside the list. The title will be the food name shown to the user.
-
-You'll also have an **order** collection, where you will push a food object every time the user add an element to his order.
-
-### Maps, Filter, Reduce, and other friends
-
--   To generate any list of element (for example, the list of food), **Map** is really useful.
--   To get the full price of list of items, **Reduce** is the perfect use case.
--   To count how many times an item is in a list, you could **Filter** the list and see the length of the result, or use a **Reduce** to count all of the instances.
-
-But this is just one way to think about that. Feel free to try any other logic you have in mind.
-
-### 💡Tips
-
--   Don't forget to clean your code, and update your readme before Monday morning.
-
-Good luck!
+### Would you like a new explanation about a specific topic?
+I would ike if you can explain more the reduce().
+### Any comments? (edited) 
+- All good.
